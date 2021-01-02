@@ -1,0 +1,62 @@
+{
+   "$id":"API_V1_S3CreateObjectEvent",
+   "$schema":"http://json-schema.org/draft-07/schema#",
+   "title":"s3CreateObjectEvent",
+   "type":"object",
+   "properties":{
+      "Records":{
+         "type":"array",
+         "minItems":1,
+         "items": {
+            "type":"object",
+            "properties": {
+               "s3": {
+                  "type":"object",
+                  "properties": {
+                     "bucket": {
+                        "type":"object",
+                        "properties":{
+                           "name": {
+                              "id": "name",
+                              "type":"string",
+                              "description":"The bucket name",
+                              "minLength":1,
+                              "maxLength":100
+                           }
+                        },
+                        "required":[
+                           "name"
+                        ]
+                     },
+                     "object":{
+                        "type":"object",
+                        "properties":{
+                           "key": {
+                              "id": "key",
+                              "type":"string",
+                              "description":"The object key",
+                              "minLength":1,
+                              "maxLength":1000
+                           }
+                        },
+                        "required":[
+                           "key"
+                        ]
+                     }
+                  },
+                  "required":[
+                     "bucket",
+                     "object"
+                  ]
+               }
+            },
+            "required":[
+               "s3"
+            ]
+         }
+      }
+   },
+   "required":[
+      "Records"
+   ]
+}

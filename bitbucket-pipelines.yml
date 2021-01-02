@@ -1,0 +1,42 @@
+pipelines:
+  default:
+    - parallel:
+      - step:
+          name: CI Python 3.6
+          image: python:3.6
+          caches:
+            - pip
+          script:
+            - make config
+            - make create-env
+            - make ci
+
+      - step:
+          name: CI Python 3.7
+          image: python:3.7
+          caches:
+            - pip
+          script:
+            - make config
+            - make create-env
+            - make ci
+
+      - step:
+          name: CI Python 3.8
+          image: python:3.8
+          caches:
+            - pip
+          script:
+            - make config
+            - make create-env
+            - make ci
+
+      - step:
+          name: CI Python 3.9
+          image: python:3.9
+          caches:
+            - pip
+          script:
+            - make config
+            - make create-env
+            - make ci
