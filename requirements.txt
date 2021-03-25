@@ -5,5 +5,5 @@ python-dotenv==0.15.0
 whitenoise==5.2.0
 jsonschema==3.2.0
 Faker==5.8.0
-boto3==1.17.36
+boto3==1.17.37
 xmltodict==0.12.0
