@@ -3,7 +3,7 @@ pipelines:
     - parallel:
       - step:
           name: CI Python 3.6
-          image: python:3.6
+          image: python:3.10
           caches:
             - pip
           script:
@@ -13,7 +13,7 @@ pipelines:
 
       - step:
           name: CI Python 3.7
-          image: python:3.7
+          image: python:3.10
           caches:
             - pip
           script:
@@ -23,7 +23,7 @@ pipelines:
 
       - step:
           name: CI Python 3.8
-          image: python:3.8
+          image: python:3.10
           caches:
             - pip
           script:
@@ -33,7 +33,7 @@ pipelines:
 
       - step:
           name: CI Python 3.9
-          image: python:3.9
+          image: python:3.10
           caches:
             - pip
           script:
